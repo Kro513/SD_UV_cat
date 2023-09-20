@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
 	{
 		Instance = this;
 
-		playerExpSystem.TakeExp += UpdateExpUI;
-		playerExpSystem.LevelUp += UpdateLevel;
+		//playerExpSystem.TakeExp += UpdateExpUI;
+		//playerExpSystem.LevelUp += UpdateLevel;
 
 	}
 
