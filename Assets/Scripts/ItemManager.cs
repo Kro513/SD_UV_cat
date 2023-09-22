@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    [SerializeField] private GameObject threadBall;
+	[SerializeField] private GameObject threadBall;
 	[SerializeField] private GameObject fishingToy;
 	[SerializeField] private GameObject laserPoint;
 	[SerializeField] private GameObject mouseToy;
 
+	
 
 	public class Item
 	{

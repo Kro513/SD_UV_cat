@@ -89,13 +89,31 @@ public class GameManager : MonoBehaviour
 	{
 		if (isEquip == false)
 		{
+			//string input = gameObject.name;
+			//switch (input)
+			//{
+			//	case "threadBall":
+			//		currentAtkText += ItemManager.ThreadBall(Atk);
+			//		currentDefText += ItemManager.ThreadBall(Def);
+			//		break;
 
+			//	case "fishingToy":
+			//		currentAtkText += ItemManager.FishingToy(Atk);
+			//		currentDefText += ItemManager.FishingToy(Def);
+			//		break;
 
-			//currentAtkText.+= ItemManager.Item.Atk;
+			//	case "laserPoint":
+			//		currentAtkText += ItemManager.LaserPoint(Atk);
+			//		currentDefText += ItemManager.LaserPoint(Def);
+			//		break;
+
+			//	case "mouseToy":
+			//		currentAtkText += ItemManager.MouseToy(Atk);
+			//		currentDefText += ItemManager.MouseToy(Def);
+			//		break;
+			//}
 			isEquip = true;
 		}
-
-
 		QuestionEquipUI.gameObject.SetActive(false);
 	}
 

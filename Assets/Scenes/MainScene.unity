@@ -418,8 +418,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 0}
   CancelEquipUIBtn: {fileID: 0}
   ConfirmEquipBtn: {fileID: 30348494}
-  QuestionEquipUI: {fileID: 174130497}
-  isEquip: 0
 --- !u!1 &32734468
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,8 +634,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 914114823}
   CancelEquipUIBtn: {fileID: 0}
   ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 0}
-  isEquip: 0
 --- !u!1 &58717329
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,8 +929,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 914114823}
   CancelEquipUIBtn: {fileID: 0}
   ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 0}
-  isEquip: 0
 --- !u!1 &95961816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &174130498
 Transform:
   m_ObjectHideFlags: 0
@@ -1425,8 +1419,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 0}
   CancelEquipUIBtn: {fileID: 253452766}
   ConfirmEquipBtn: {fileID: 30348494}
-  QuestionEquipUI: {fileID: 174130497}
-  isEquip: 0
 --- !u!114 &253452770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3574,9 +3566,9 @@ GameObject:
   - component: {fileID: 1022210122}
   - component: {fileID: 1022210123}
   - component: {fileID: 1022210124}
-  - component: {fileID: 1022210125}
+  - component: {fileID: 1022210126}
   m_Layer: 0
-  m_Name: thread
+  m_Name: threadBall
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3693,9 +3685,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1022210125}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: EquipItem
+      - m_Target: {fileID: 1022210126}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenEquipUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3705,7 +3697,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1022210125
+--- !u!114 &1022210126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3714,16 +3706,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022210121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a5509f6e2592a4c93dfa1327ac1ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: bddf1440e7ee8d44d8711920a464a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusBtn: {fileID: 0}
-  InventoryBtn: {fileID: 0}
+  levelText: {fileID: 0}
+  nameText: {fileID: 0}
+  goldText: {fileID: 0}
+  infoText: {fileID: 0}
+  expText: {fileID: 0}
+  atkText: {fileID: 0}
+  defText: {fileID: 0}
+  hpText: {fileID: 0}
+  critText: {fileID: 0}
+  expGaugeSlider: {fileID: 0}
   StatusUI: {fileID: 0}
   InventoryUI: {fileID: 0}
-  CancelEquipUIBtn: {fileID: 0}
-  ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 1022210121}
+  StatusBtn: {fileID: 0}
+  InventoryBtn: {fileID: 0}
+  QuestionEquipUI: {fileID: 174130497}
+  QuestionText: {fileID: 0}
+  QuestionEquipText: {fileID: 1614263432}
   isEquip: 0
 --- !u!1 &1034015583
 GameObject:
@@ -3942,8 +3944,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 914114823}
   CancelEquipUIBtn: {fileID: 0}
   ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 0}
-  isEquip: 0
 --- !u!1 &1083190645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,8 +4209,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1137360479}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: EquipItem
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenEquipUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4229,16 +4229,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137360475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a5509f6e2592a4c93dfa1327ac1ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: bddf1440e7ee8d44d8711920a464a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusBtn: {fileID: 0}
-  InventoryBtn: {fileID: 0}
+  levelText: {fileID: 0}
+  nameText: {fileID: 0}
+  goldText: {fileID: 0}
+  infoText: {fileID: 0}
+  expText: {fileID: 0}
+  atkText: {fileID: 0}
+  defText: {fileID: 0}
+  hpText: {fileID: 0}
+  critText: {fileID: 0}
+  expGaugeSlider: {fileID: 0}
   StatusUI: {fileID: 0}
   InventoryUI: {fileID: 0}
-  CancelEquipUIBtn: {fileID: 0}
-  ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 1137360475}
+  StatusBtn: {fileID: 0}
+  InventoryBtn: {fileID: 0}
+  QuestionEquipUI: {fileID: 174130497}
+  QuestionText: {fileID: 0}
+  QuestionEquipText: {fileID: 1614263432}
   isEquip: 0
 --- !u!1 &1137777203
 GameObject:
@@ -4974,15 +4984,15 @@ MonoBehaviour:
   defText: {fileID: 294867254}
   hpText: {fileID: 1728754412}
   critText: {fileID: 576947121}
-  QuestionEquipText: {fileID: 0}
   expGaugeSlider: {fileID: 1328306308}
   StatusUI: {fileID: 1545770607}
   InventoryUI: {fileID: 914114823}
   StatusBtn: {fileID: 1036743979}
   InventoryBtn: {fileID: 37045594}
   QuestionEquipUI: {fileID: 174130497}
-  falseQuestionEquipText: Do you want to equip it?
-  trueQuestionEquipText: Do you want to unequip it?
+  QuestionText: {fileID: 0}
+  QuestionEquipText: {fileID: 0}
+  isEquip: 0
 --- !u!4 &1329491469
 Transform:
   m_ObjectHideFlags: 0
@@ -5867,8 +5877,6 @@ MonoBehaviour:
   InventoryUI: {fileID: 914114823}
   CancelEquipUIBtn: {fileID: 0}
   ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 0}
-  isEquip: 0
 --- !u!1 &1535953817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,8 +6274,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1586957861}
   - component: {fileID: 1586957862}
-  - component: {fileID: 1586957864}
   - component: {fileID: 1586957863}
+  - component: {fileID: 1586957864}
   m_Layer: 0
   m_Name: laserPoint
   m_TagString: Item
@@ -6387,8 +6395,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1586957864}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: EquipItem
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenEquipUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6407,16 +6415,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586957860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a5509f6e2592a4c93dfa1327ac1ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: bddf1440e7ee8d44d8711920a464a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusBtn: {fileID: 0}
-  InventoryBtn: {fileID: 0}
+  levelText: {fileID: 0}
+  nameText: {fileID: 0}
+  goldText: {fileID: 0}
+  infoText: {fileID: 0}
+  expText: {fileID: 0}
+  atkText: {fileID: 0}
+  defText: {fileID: 0}
+  hpText: {fileID: 0}
+  critText: {fileID: 0}
+  expGaugeSlider: {fileID: 0}
   StatusUI: {fileID: 0}
   InventoryUI: {fileID: 0}
-  CancelEquipUIBtn: {fileID: 0}
-  ConfirmEquipBtn: {fileID: 0}
-  QuestionEquipUI: {fileID: 1586957860}
+  StatusBtn: {fileID: 0}
+  InventoryBtn: {fileID: 0}
+  QuestionEquipUI: {fileID: 174130497}
+  QuestionText: {fileID: 0}
+  QuestionEquipText: {fileID: 1614263432}
   isEquip: 0
 --- !u!1 &1590183369
 GameObject:
@@ -7757,8 +7775,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2054478235}
   - component: {fileID: 2054478236}
-  - component: {fileID: 2054478238}
   - component: {fileID: 2054478237}
+  - component: {fileID: 2054478238}
   m_Layer: 0
   m_Name: fishingToy
   m_TagString: Item
@@ -7878,8 +7896,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2054478238}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: EquipItem
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenEquipUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7898,16 +7916,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054478234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a5509f6e2592a4c93dfa1327ac1ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: bddf1440e7ee8d44d8711920a464a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusBtn: {fileID: 0}
-  InventoryBtn: {fileID: 0}
+  levelText: {fileID: 0}
+  nameText: {fileID: 0}
+  goldText: {fileID: 0}
+  infoText: {fileID: 0}
+  expText: {fileID: 0}
+  atkText: {fileID: 0}
+  defText: {fileID: 0}
+  hpText: {fileID: 0}
+  critText: {fileID: 0}
+  expGaugeSlider: {fileID: 0}
   StatusUI: {fileID: 0}
   InventoryUI: {fileID: 0}
-  CancelEquipUIBtn: {fileID: 0}
-  ConfirmEquipBtn: {fileID: 0}
+  StatusBtn: {fileID: 0}
+  InventoryBtn: {fileID: 0}
   QuestionEquipUI: {fileID: 2054478234}
+  QuestionText: {fileID: 0}
+  QuestionEquipText: {fileID: 1614263432}
   isEquip: 0
 --- !u!1 &2111096147
 GameObject:
