@@ -20,25 +20,96 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI defText;
 	[SerializeField] private TextMeshProUGUI hpText;
 	[SerializeField] private TextMeshProUGUI critText;
+	
+
 	[SerializeField] private Slider expGaugeSlider;
 
+	[SerializeField] private GameObject StatusUI;
+	[SerializeField] private GameObject InventoryUI;
+
+	[SerializeField] private GameObject StatusBtn;
+	[SerializeField] private GameObject InventoryBtn;
+	[SerializeField] private GameObject QuestionEquipUI;
+
+	[SerializeField] private TextMeshProUGUI QuestionText;
+	[SerializeField] private TextMeshProUGUI QuestionEquipText;
+
+	private int currentGoldText = 20000;
+	private int currentAtkText = 10;
+	private int currentDefText = 10;
+	private int currentExpText = 2;
+	private int currentLevelText = 1;
+	private int currentHpText = 100;
+	private int currentCritText = 10;
+	private string currentNameText = "Gray";
+	private string currentInfoText = "The cute gray cat!";
+	
+
+	public bool isEquip;
+	
 
 	private void Awake()
 	{
 		Instance = this;
 
-		//playerExpSystem.TakeExp += UpdateExpUI;
-		//playerExpSystem.LevelUp += UpdateLevel;
+		StatusUI.SetActive(false);
+		InventoryUI.SetActive(false);
+		StatusBtn.gameObject.SetActive(true);
+		InventoryBtn.gameObject.SetActive(true);
+		//QuestionEquipUI.gameObject.SetActive(false);
+
+		DefaltPlayerStatusSetting();
 
 	}
 
-	private void UpdateExpUI()
+	
+
+	
+	private void DefaltPlayerStatusSetting()
 	{
-		expGaugeSlider.value = playerExpSystem.CurrentExp / playerExpSystem.MaxExp;
+		nameText.text = (currentNameText).ToString();
+		atkText.text = (currentAtkText).ToString();
+		defText.text = (currentDefText).ToString();
+		expText.text = ((currentExpText % 10).ToString() + " / 10");
+		levelText.text = (currentLevelText).ToString();
+		infoText.text = (currentInfoText).ToString();
+		goldText.text = (currentGoldText).ToString();
+		hpText.text = (currentHpText).ToString();
+		critText.text = (currentCritText).ToString();
+		
 	}
 
-	private void UpdateLevel()
-	{
 
+	public void CancelEquip()
+	{
+		QuestionEquipUI.gameObject.SetActive(false);
+	}
+
+	public void EquipItem()
+	{
+		if (isEquip == false)
+		{
+
+
+			//currentAtkText.+= ItemManager.Item.Atk;
+			isEquip = true;
+		}
+
+
+		QuestionEquipUI.gameObject.SetActive(false);
+	}
+
+	public void OpenEquipUI()
+	{
+		QuestionEquipUI.gameObject.SetActive(true);
+
+		if (isEquip == false)
+		{
+			QuestionEquipText.text = "Do you want to equip it?";
+		}
+		else
+		{
+			QuestionEquipText.text = "Do you want to unequip it?";
+		}
 	}
 }
